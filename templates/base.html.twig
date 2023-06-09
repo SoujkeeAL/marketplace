@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head> {% block head %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        <meta name="description" content="Товарный агрегатор Megano">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link href="{{ asset('assets/img/icons/favicon.ico') }}" rel="shortcut icon">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Regular.woff') }}" as="font">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Italic.woff') }}" as="font">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Bold.woff') }}" as="font">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Bold_Italic.woff') }}" as="font">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Light.woff') }}" as="font">
+        <link rel="preload" href="{{ asset('assets/fonts/Roboto/Roboto-Light_Italic.woff') }}" as="font">
+        <link rel="stylesheet" href="{{ asset('assets/css/basic.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/extra.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fonts.css') }}">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="{{ asset('assets/plg/jQuery/jquery-3.5.0.slim.min.js') }}"></script>
+        <script src="{{ asset('assets/plg/form/jquery.form.js') }}"></script>
+        <script src="{{ asset('assets/plg/form/jquery.maskedinput.min.js') }}"></script>
+        <script src="{{ asset('assets/plg/range/ion.rangeSlider.min.js') }}"></script>
+        <script src="{{ asset('assets/plg/Slider/slick.min.js') }}"></script>
+        <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    {% endblock %}
+</head>
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
+
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
+
+</html>

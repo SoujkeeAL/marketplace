@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Password Reset Email Sent{% endblock %}
+
+{% block body %}
+    <div class="Middle-top">
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">Восстановление пароля</h1>
+                <ul class="breadcrumbs Middle-breadcrumbs">
+                    <li class="breadcrumbs-item"><a title="Товарный агрегатор Megano" href="{{ path('app_main') }}">Главная</a></li>
+                    <li class="breadcrumbs-item breadcrumbs-item_current"><span>Восстановление пароля</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>
+        Если учетная запись, соответствующая Вашему адресу электронной почты, существует, значит, только что было отправлено электронное письмо, содержащее ссылку, которую вы можете использовать для сброса пароля.
+    </p>
+    <p>
+        Срок действия этой ссылки истекает через {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p>Если Вы не получили письмо, проверьте папку со спамом или <a class="btn btn_primary" title="Восстановить пароль ещё раз" href="{{ path('app_forgot_password_request') }}">Восстановить пароль ещё раз</a></p>
+{% endblock %}
