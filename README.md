@@ -4,6 +4,8 @@
 
 ● git clone
 
+● composer install
+
 ● изменение файла .env
 
 ● php bin/console doctrine:database:create
